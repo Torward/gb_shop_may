@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.0'
+    id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
@@ -27,7 +27,7 @@ compileJava {
 
 
 ext {
-    set('springCloudVersion', "2021.0.3-SNAPSHOT")
+    set('springCloudVersion', "2021.0.2")
 }
 
 dependencies {
@@ -38,6 +38,7 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
