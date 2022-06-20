@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.lomov.gb_shop_may.dao.CategoryDao;
 import ru.lomov.gb_shop_may.dao.ManufacturerDao;
 import ru.lomov.gb_shop_may.dao.ProductDao;
 import ru.lomov.gb_shop_may.entity.Product;
@@ -25,6 +26,7 @@ public class ProductService {
     private final ProductDao productDao;
     private final ProductMapper productMapper;
     private final ManufacturerDao manufacturerDao;
+    private final CategoryDao categoryDao;
 
     @Transactional
     public void init() {
@@ -40,7 +42,7 @@ public class ProductService {
     }
 
     public ProductDto save(ProductDto productDto) {
-        Product product = productMapper.toProduct(productDto, manufacturerDao);
+        Product product = productMapper.toProduct(productDto, manufacturerDao, categoryDao);
         if (product.getId() != null) {
             productDao.findById(productDto.getId()).ifPresent(
                     (p) -> product.setVersion(p.getVersion())
