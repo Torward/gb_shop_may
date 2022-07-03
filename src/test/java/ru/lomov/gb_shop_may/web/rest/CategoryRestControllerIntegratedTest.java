@@ -10,9 +10,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import ru.gb.gbapimay.category.dto.CategoryDto;
 import ru.lomov.gb_shop_may.dao.CategoryDao;
-import ru.lomov.gb_shop_may.web.dto.CategoryDto;
-import ru.lomov.gb_shop_may.web.dto.ManufacturerDto;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertEquals;

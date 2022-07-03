@@ -1,22 +1,19 @@
 package ru.lomov.gb_shop_may.web.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import ru.gb.gbapimay.common.enums.Status;
+import ru.gb.gbapimay.product.dto.ProductDto;
 import ru.lomov.gb_shop_may.dao.CategoryDao;
 import ru.lomov.gb_shop_may.dao.ManufacturerDao;
 import ru.lomov.gb_shop_may.dao.ProductDao;
 import ru.lomov.gb_shop_may.entity.Category;
 import ru.lomov.gb_shop_may.entity.Manufacturer;
-import ru.lomov.gb_shop_may.entity.enums.Status;
-import ru.lomov.gb_shop_may.web.dto.ProductDto;
 import ru.lomov.gb_shop_may.web.dto.mapper.CategoryMapper;
 
 import java.math.BigDecimal;
@@ -33,6 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Disabled
 class ProductRestControllerIntegratedTest {
     public static final String APPLE_COMPANY_NAME = "Apple";
     public static final String SMARTPHONES = "Смартфоны";

@@ -3,14 +3,13 @@ package ru.lomov.gb_shop_may.web.dto.mapper;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import ru.gb.gbapimay.category.dto.CategoryDto;
+import ru.gb.gbapimay.product.dto.ProductDto;
 import ru.lomov.gb_shop_may.dao.CategoryDao;
 import ru.lomov.gb_shop_may.dao.ManufacturerDao;
 import ru.lomov.gb_shop_may.entity.Category;
 import ru.lomov.gb_shop_may.entity.Manufacturer;
 import ru.lomov.gb_shop_may.entity.Product;
-import ru.lomov.gb_shop_may.web.dto.CategoryDto;
-import ru.lomov.gb_shop_may.web.dto.ProductDto;
-import ru.lomov.gb_shop_may.web.dto.ProductManufacturerDto;
 
 
 import java.util.NoSuchElementException;
@@ -23,8 +22,6 @@ public interface ProductMapper {
 
     ProductDto toProductDto(Product product);
 
-    @Mapping(source = "manufacturer", target = "manufacturerDto")
-    ProductManufacturerDto toProductManufacturerDto(Product product);
 
     default Manufacturer getManufacturer(String manufacturer, @Context ManufacturerDao manufacturerDao) {
         return manufacturerDao.findByName(manufacturer).orElseThrow(NoSuchElementException::new);

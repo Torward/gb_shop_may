@@ -2,14 +2,12 @@ package ru.lomov.gb_shop_may.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Profile;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.gb.gbapimay.manufacturer.dto.ManufacturerDto;
 import ru.lomov.gb_shop_may.dao.ManufacturerDao;
-import ru.lomov.gb_shop_may.dao.ProductDao;
 import ru.lomov.gb_shop_may.entity.Manufacturer;
-import ru.lomov.gb_shop_may.web.dto.ManufacturerDto;
 import ru.lomov.gb_shop_may.web.dto.mapper.ManufacturerMapper;
 
 import java.util.List;

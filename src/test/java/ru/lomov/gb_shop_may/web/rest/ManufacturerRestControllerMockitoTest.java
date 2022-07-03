@@ -11,8 +11,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import ru.gb.gbapimay.manufacturer.dto.ManufacturerDto;
 import ru.lomov.gb_shop_may.service.ManufacturerService;
-import ru.lomov.gb_shop_may.web.dto.ManufacturerDto;
 
 import java.util.ArrayList;
 import java.util.List;

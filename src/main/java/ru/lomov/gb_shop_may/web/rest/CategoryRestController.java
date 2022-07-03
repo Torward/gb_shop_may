@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import ru.gb.gbapimay.category.dto.CategoryDto;
 import ru.lomov.gb_shop_may.service.CategoryService;
-import ru.lomov.gb_shop_may.web.dto.CategoryDto;
 
 import java.net.URI;
 import java.util.List;

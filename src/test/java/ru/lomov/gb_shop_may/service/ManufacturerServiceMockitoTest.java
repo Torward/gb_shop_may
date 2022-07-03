@@ -5,13 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.stubbing.Answer;
 import org.springframework.test.web.servlet.MockMvc;
+import ru.gb.gbapimay.manufacturer.dto.ManufacturerDto;
 import ru.lomov.gb_shop_may.dao.ManufacturerDao;
 import ru.lomov.gb_shop_may.entity.Manufacturer;
-import ru.lomov.gb_shop_may.web.dto.ManufacturerDto;
 import ru.lomov.gb_shop_may.web.dto.mapper.ManufacturerMapper;
 
 import java.util.ArrayList;

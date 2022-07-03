@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import ru.gb.gbapimay.manufacturer.dto.ManufacturerDto;
 import ru.lomov.gb_shop_may.service.ManufacturerService;
-import ru.lomov.gb_shop_may.web.dto.ManufacturerDto;
 
 
 import java.net.URI;

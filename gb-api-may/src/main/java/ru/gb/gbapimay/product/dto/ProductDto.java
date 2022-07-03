@@ -1,19 +1,21 @@
-package ru.lomov.gb_shop_may.web.dto;
+package ru.gb.gbapimay.product.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import ru.lomov.gb_shop_may.entity.enums.Status;
+import ru.gb.gbapimay.category.dto.CategoryDto;
+import ru.gb.gbapimay.common.enums.Status;
+
 
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductManufacturerDto {
+public class ProductDto {
     private Long id;
     @NotBlank
     private String title;
@@ -25,6 +27,6 @@ public class ProductManufacturerDto {
     private LocalDate manufactureDate;
     @NotNull
     private Status status;
-    @JsonProperty(value = "manufacturer")
-    private ManufacturerDto manufacturerDto;
+    private String manufacturer;
+    private Set<CategoryDto> categories;
 }

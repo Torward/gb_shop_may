@@ -51,6 +51,8 @@ dependencies {
 
     //mapStruct
     implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    //external api
+    implementation files('lib/gb-api-may-0.0.3-plain.jar')
 }
 
 dependencyManagement {
